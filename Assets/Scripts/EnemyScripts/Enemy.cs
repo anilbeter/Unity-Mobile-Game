@@ -16,10 +16,21 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         health -= dmg;
-        // damage animation
+        HurtSequence();
         if (health <= 0)
         {
-            // destroy animation
+            DeathSequence();
         }
+    }
+
+    // virtual functions -> can be use and override by child classes
+    public virtual void HurtSequence()
+    {
+        // do something
+    }
+
+    public virtual void DeathSequence()
+    {
+        // do something
     }
 }
