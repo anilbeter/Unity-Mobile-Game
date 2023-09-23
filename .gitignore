@@ -9,3 +9,4 @@ Assets/*.meta
 Temp/
 Assets/Fonts
 Assets/Sprites
+*.csproj
