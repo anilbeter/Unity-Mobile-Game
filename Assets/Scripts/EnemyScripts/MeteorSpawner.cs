@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class MeteorSpawner : MonoBehaviour
 {
-    // this array will contains all meteor prefabs
     [SerializeField] private GameObject[] meteor;
     [SerializeField] private float spawnTime;
-    private float timer;
+    private float timer = 0f;
     private int i;
 
     private Camera mainCam;
@@ -22,9 +21,18 @@ public class MeteorSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
+        timer += Time.deltaTime;
+        if (timer > spawnTime)
+        {
+            i = Random.Range(0, meteor.Length);
 
+            // to create random meteors
+            Instantiate(meteor[i], new Vector3(Random.RandomRange(maxLeft, maxRight), yPos, -5), Quaternion.Euler(0, 0, Random.Range(0, 360)));
+            timer = 0;
+        }
     }
 
     private IEnumerator SetBoundaries()
