@@ -13,9 +13,13 @@ public class Enemy : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float dmg)
     {
-
+        health -= dmg;
+        // damage animation
+        if (health <= 0)
+        {
+            // destroy animation
+        }
     }
 }
