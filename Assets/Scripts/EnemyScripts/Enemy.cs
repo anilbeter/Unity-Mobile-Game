@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // protected -> visible just to parent and child classes. Other classes can't see or change them directly
-    protected float health;
+    [SerializeField] protected float health;
 
 
     void Start()
