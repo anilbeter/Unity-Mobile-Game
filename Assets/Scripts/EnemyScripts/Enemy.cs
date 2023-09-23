@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     // protected -> visible just to parent and child classes. Other classes can't see or change them directly
     [SerializeField] protected float health;
+    [SerializeField] protected Rigidbody2D rb;
 
 
     void Start()
