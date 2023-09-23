@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // health variable will be inherited for all child classes. That's mean Meteor script can use health variable
-    public float health;
+    // protected -> visible just to parent and child classes. Other classes can't see or change them directly
+    protected float health;
 
 
     void Start()
