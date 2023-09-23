@@ -1,0 +1,9 @@
+.vscode/
+Library/
+Logs/
+Packages/
+ProjectSettings/
+UserSettings/
+Assets/Scenes/
+Assets/*.meta
+*.sln
