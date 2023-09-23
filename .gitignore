@@ -10,3 +10,4 @@ Temp/
 Assets/Fonts
 Assets/Sprites
 *.csproj
+obj/
