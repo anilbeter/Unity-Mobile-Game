@@ -30,7 +30,9 @@ public class MeteorSpawner : MonoBehaviour
             i = Random.Range(0, meteor.Length);
 
             // to create random meteors
-            Instantiate(meteor[i], new Vector3(Random.RandomRange(maxLeft, maxRight), yPos, -5), Quaternion.Euler(0, 0, Random.Range(0, 360)));
+            GameObject obj = Instantiate(meteor[i], new Vector3(Random.RandomRange(maxLeft, maxRight), yPos, -5), Quaternion.Euler(0, 0, Random.Range(0, 360)));
+            float size = Random.Range(0.9f, 1.2f);
+            obj.transform.localScale = new Vector3(size, size, 1);
             timer = 0;
         }
     }
