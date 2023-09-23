@@ -32,6 +32,12 @@ public class PlayerControls : MonoBehaviour
             if (Touch.activeTouches[0].finger.index == 0)
             {
                 Touch myTouch = Touch.activeTouches[0];
+
+                // if (myTouch.tapCount == 2)
+                // {
+                //     Debug.Log("You tapped the screen two times!");
+                // }
+
                 Vector3 touchPos = myTouch.screenPosition;
 
 #if UNITY_EDITOR
