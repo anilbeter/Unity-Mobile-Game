@@ -15,4 +15,14 @@ public class Meteor : Enemy
     {
 
     }
+
+    public override void HurtSequence()
+    {
+        // base.HurtSequence(); -> HurtSequence() is empty in parent class. So this is unncessary our situation.
+    }
+
+    public override void DeathSequence()
+    {
+
+    }
 }
