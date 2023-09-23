@@ -1528,8 +1528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1058a5b7ef8847419db7dd157096808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteor: []
-  spawnTime: 2
+  meteor:
+  - {fileID: 104305084545675016, guid: a148213bab5bc404390503bb221c27b7, type: 3}
+  - {fileID: 4761731246606037636, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
+  - {fileID: 2646882148958500574, guid: d11beb69c242eb04e8169f1e6955d6fe, type: 3}
+  spawnTime: 1
 --- !u!4 &2081334025
 Transform:
   m_ObjectHideFlags: 0
@@ -1580,63 +1583,6 @@ Transform:
   - {fileID: 12150726}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &190415053570585655
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6174069989510963967, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7328109941544212407, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
-      propertyPath: m_Name
-      value: MeteorThree
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5668d779387d22944a9400e03e95c7aa, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1648,5 +1594,4 @@ SceneRoots:
   - {fileID: 1576117396}
   - {fileID: 318474321}
   - {fileID: 574485091}
-  - {fileID: 190415053570585655}
   - {fileID: 2081334025}
