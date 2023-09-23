@@ -17,7 +17,7 @@ public class MeteorSpawner : MonoBehaviour
 
     void Start()
     {
-
+        mainCam = Camera.main;
     }
 
     // Update is called once per frame
