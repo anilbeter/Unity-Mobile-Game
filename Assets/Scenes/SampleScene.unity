@@ -746,6 +746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 809874311}
   - component: {fileID: 809874310}
+  - component: {fileID: 809874316}
   - component: {fileID: 809874312}
   - component: {fileID: 809874315}
   - component: {fileID: 809874314}
@@ -978,6 +979,19 @@ MonoBehaviour:
   laserBullet: {fileID: 2815700554617361115, guid: 46223750431422c4cb102a39002b276a, type: 3}
   basicShootPoint: {fileID: 2039728723}
   shootingInterval: 0.3
+--- !u!114 &809874316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809874309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba63372b7afe47f449c9dd47363c21d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
 --- !u!1 &1282276160
 GameObject:
   m_ObjectHideFlags: 0
