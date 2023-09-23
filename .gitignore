@@ -4,7 +4,8 @@ Logs/
 Packages/
 ProjectSettings/
 UserSettings/
-Assets/Scenes/
 Assets/*.meta
 *.sln
 Temp/
+Assets/Fonts
+Assets/Sprites
