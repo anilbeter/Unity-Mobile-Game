@@ -35,7 +35,11 @@ public class Meteor : Enemy
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
+            PlayerStats player = other.GetComponent<PlayerStats>();
+            // damage variable comes from Enemy(parent) script
+            player.PlayerTakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 
