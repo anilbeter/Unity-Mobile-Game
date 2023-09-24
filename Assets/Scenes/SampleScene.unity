@@ -570,6 +570,7 @@ GameObject:
   - component: {fileID: 280841613}
   - component: {fileID: 280841612}
   - component: {fileID: 280841611}
+  - component: {fileID: 280841618}
   m_Layer: 7
   m_Name: PurpleEnemy
   m_TagString: Untagged
@@ -834,7 +835,7 @@ Transform:
   m_GameObject: {fileID: 280841610}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02203536, y: 7.22, z: 0}
+  m_LocalPosition: {x: 0.02203536, y: 9.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -863,6 +864,28 @@ MonoBehaviour:
   leftCannon: {fileID: 239151923}
   rightCannon: {fileID: 978002096}
   bulletPrefab: {fileID: 1587077352804162891, guid: 417a5724a68bb2746a5a555938df6a0c, type: 3}
+--- !u!95 &280841618
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280841610}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 774a5d24ba61e614c8798cd059a8f5d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &318474320
 GameObject:
   m_ObjectHideFlags: 0
