@@ -26,7 +26,6 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
-        // fingers[0] -> first finger
         if (Touch.activeTouches.Count > 0)
         {
             if (Touch.activeTouches[0].finger.index == 0)
