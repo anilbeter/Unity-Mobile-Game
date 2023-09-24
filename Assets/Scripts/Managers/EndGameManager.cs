@@ -19,6 +19,17 @@ public class EndGameManager : MonoBehaviour
 
     }
 
+    public void StartResolveSequence()
+    {
+        StartCoroutine(ResolveSequence());
+    }
+
+    private IEnumerator ResolveSequence()
+    {
+        yield return new WaitForSeconds(2);
+        ResolveGame();
+    }
+
     public void ResolveGame()
     {
         if (!gameOver)
