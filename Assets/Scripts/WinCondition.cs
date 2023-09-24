@@ -23,6 +23,7 @@ public class WinCondition : MonoBehaviour
             {
                 spawner[i].SetActive(false);
             }
+            EndGameManager.endManager.ResolveGame();
             // create a function that will check if the player survived the last spawned enemy/meteor
             //   ---- win or lose screen
             //   ------- GAME MANAGER

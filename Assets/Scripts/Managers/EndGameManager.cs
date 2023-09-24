@@ -6,6 +6,7 @@ public class EndGameManager : MonoBehaviour
 {
     public static EndGameManager endManager;
 
+    public bool gameOver;
     private PanelController panelController;
 
     private void Awake()
@@ -16,6 +17,18 @@ public class EndGameManager : MonoBehaviour
     void Start()
     {
 
+    }
+
+    public void ResolveGame()
+    {
+        if (!gameOver)
+        {
+            WinGame();
+        }
+        else
+        {
+            LoseGame();
+        }
     }
 
     public void WinGame()
