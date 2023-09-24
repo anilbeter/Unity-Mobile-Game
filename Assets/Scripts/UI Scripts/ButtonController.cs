@@ -14,4 +14,9 @@ public class ButtonController : MonoBehaviour
     {
         SceneManager.LoadScene(levelIndex);
     }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
