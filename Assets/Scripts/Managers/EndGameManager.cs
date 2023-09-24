@@ -21,6 +21,7 @@ public class EndGameManager : MonoBehaviour
 
     public void StartResolveSequence()
     {
+        StopCoroutine(nameof(ResolveSequence));
         StartCoroutine(ResolveSequence());
     }
 
