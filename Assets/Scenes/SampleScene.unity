@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba63372b7afe47f449c9dd47363c21d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 5
   healthFill: {fileID: 880356983}
   explosionPrefab: {fileID: 8505863203834674857, guid: 9c0ffb34a5059f0429a72faf21da9f41, type: 3}
   anim: {fileID: 809874317}
@@ -1464,6 +1464,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba969f53337bdc4fadf591ba1e176bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy:
+  - {fileID: 1508484977575377063, guid: 077fdef12a2201a4aafed84ad7400e86, type: 3}
+  - {fileID: 481263090784919225, guid: 69b18a4dbd035ec4395374b7468164d9, type: 3}
+  enemySpawnTime: 2
 --- !u!4 &1035051397
 Transform:
   m_ObjectHideFlags: 0
