@@ -28,6 +28,8 @@ public class Meteor : Enemy
 
     public override void DeathSequence()
     {
+        // IDEA -> spawn explosion prefab when meteor destroyed
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
@@ -39,6 +41,7 @@ public class Meteor : Enemy
             PlayerStats player = other.GetComponent<PlayerStats>();
             // damage variable comes from Enemy(parent) script
             player.PlayerTakeDamage(damage);
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
