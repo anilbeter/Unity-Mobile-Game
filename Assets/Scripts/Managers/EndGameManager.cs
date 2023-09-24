@@ -16,8 +16,14 @@ public class EndGameManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void WinGame()
+    {
+        // activate the panel
+        // unlock next level
+        // score
+    }
+
+    public void LoseGame()
     {
 
     }
