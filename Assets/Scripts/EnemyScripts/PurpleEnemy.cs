@@ -46,6 +46,11 @@ public class PurpleEnemy : Enemy
 
     public override void HurtSequence()
     {
+        // GetCurrentAnimatorStateInfo(0) -> 0 means that is Base Layer
+        // if condition means -> animation currently running
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Dmg"))
+            return;
+        // So; if animation is running, just return. Don't activate it one more time. I use it for anti-spam
         anim.SetTrigger("Damage");
     }
 
