@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class EndGameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static EndGameManager endManager;
+
+    private void Awake()
+    {
+        endManager = this;
+    }
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
