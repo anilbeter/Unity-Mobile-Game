@@ -10,7 +10,7 @@ public class PanelController : MonoBehaviour
 
     void Start()
     {
-
+        EndGameManager.endManager.RegisterPanelController(this);
     }
 
     public void ActivateWin()

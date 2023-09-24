@@ -6,6 +6,8 @@ public class EndGameManager : MonoBehaviour
 {
     public static EndGameManager endManager;
 
+    private PanelController panelController;
+
     private void Awake()
     {
         endManager = this;
@@ -26,5 +28,10 @@ public class EndGameManager : MonoBehaviour
     public void LoseGame()
     {
 
+    }
+
+    public void RegisterPanelController(PanelController pC)
+    {
+        panelController = pC;
     }
 }
