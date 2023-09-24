@@ -23,11 +23,12 @@ public class EndGameManager : MonoBehaviour
         // activate the panel
         // unlock next level
         // score
+        panelController.ActivateWin();
     }
 
     public void LoseGame()
     {
-
+        panelController.ActivateLose();
     }
 
     public void RegisterPanelController(PanelController pC)
