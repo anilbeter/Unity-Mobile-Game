@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
     private float health;
 
     [SerializeField] private Image healthFill;
+    [SerializeField] private GameObject explosionPrefab;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class PlayerStats : MonoBehaviour
         healthFill.fillAmount = health / maxHealth;
         if (health <= 0)
         {
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
