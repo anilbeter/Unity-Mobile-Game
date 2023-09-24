@@ -46,7 +46,7 @@ public class PurpleEnemy : Enemy
 
     public override void HurtSequence()
     {
-        // animation
+        anim.SetTrigger("Damage");
     }
 
     public override void DeathSequence()
