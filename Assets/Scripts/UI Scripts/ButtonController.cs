@@ -5,5 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
+    public void LoadLevelString(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
 
+    public void LoadLevelInt(int levelIndex)
+    {
+        SceneManager.LoadScene(levelIndex);
+    }
 }
