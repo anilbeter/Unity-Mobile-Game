@@ -2375,6 +2375,8 @@ MonoBehaviour:
   changeValue: 0.04
   waitTime: 0.02
   fadeStarted: 0
+  loadingScreen: {fileID: 0}
+  loadingBar: {fileID: 0}
 --- !u!114 &1134305930
 MonoBehaviour:
   m_ObjectHideFlags: 0

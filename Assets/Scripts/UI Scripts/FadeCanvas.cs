@@ -49,12 +49,12 @@ public class FadeCanvas : MonoBehaviour
 
     IEnumerator FadeIn()
     {
-        if (fadeStarted)
-            yield break;
         loadingScreen.SetActive(false);
         fadeStarted = false;
         while (canvasGroup.alpha > 0)
         {
+            if (fadeStarted)
+                yield break;
             canvasGroup.alpha -= changeValue;
             yield return new WaitForSeconds(waitTime);
         }
