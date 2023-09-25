@@ -11,3 +11,4 @@ Assets/Fonts
 Assets/Sprites
 *.csproj
 obj/
+.utmp/
