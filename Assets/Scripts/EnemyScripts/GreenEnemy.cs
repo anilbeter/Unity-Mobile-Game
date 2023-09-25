@@ -31,6 +31,7 @@ public class GreenEnemy : Enemy
     // DeathSequence function called by LaserBullet script ( enemy.TakeDamage(damage); ). In this way every time laser bullet and enemy collides, enemy takes damage and explodes(destroyes)
     public override void DeathSequence()
     {
+        base.DeathSequence();
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }

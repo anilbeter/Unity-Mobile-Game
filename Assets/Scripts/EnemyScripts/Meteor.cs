@@ -28,6 +28,7 @@ public class Meteor : Enemy
 
     public override void DeathSequence()
     {
+        base.DeathSequence();
         // IDEA -> spawn explosion prefab when meteor destroyed
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
