@@ -92,7 +92,7 @@ public class EndGameManager : MonoBehaviour
         int highScore = PlayerPrefs.GetInt("HighScore" + SceneManager.GetActiveScene().name, 0);
         if (score > highScore)
         {
-            PlayerPrefs.GetInt("HighScore" + SceneManager.GetActiveScene().name, score);
+            PlayerPrefs.SetInt("HighScore" + SceneManager.GetActiveScene().name, score);
         }
         // reset the score
         score = 0;
