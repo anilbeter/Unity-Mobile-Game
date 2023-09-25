@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndGameManager : MonoBehaviour
 {
@@ -65,12 +66,13 @@ public class EndGameManager : MonoBehaviour
     {
         // activate the panel
         // unlock next level
-        // score
+        ScoreSet();
         panelController.ActivateWin();
     }
 
     public void LoseGame()
     {
+        ScoreSet();
         panelController.ActivateLose();
     }
 
@@ -82,5 +84,18 @@ public class EndGameManager : MonoBehaviour
     public void RegisterScoreText(TextMeshProUGUI scoreText)
     {
         scoreTextComponent = scoreText;
+    }
+
+    private void ScoreSet()
+    {
+        PlayerPrefs.SetInt("Score" + SceneManager.GetActiveScene().name, score);
+        int highScore = PlayerPrefs.GetInt("HighScore" + SceneManager.GetActiveScene().name, 0);
+        if (score > highScore)
+        {
+            PlayerPrefs.GetInt("HighScore" + SceneManager.GetActiveScene().name, score);
+        }
+        // reset the score
+        score = 0;
+
     }
 }
