@@ -1875,6 +1875,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3610404362198402621, guid: 4c6eec675f3cec5468cc46073d9f5008, type: 3}
+      propertyPath: spawnTime
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5427289852558378161, guid: 4c6eec675f3cec5468cc46073d9f5008, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1935,6 +1939,10 @@ PrefabInstance:
     - target: {fileID: 1946620434278964159, guid: ed96582ae15572440a2a8ba485ad69ed, type: 3}
       propertyPath: m_Name
       value: WinCondition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081066963126841614, guid: ed96582ae15572440a2a8ba485ad69ed, type: 3}
+      propertyPath: possibleWinTime
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8081066963126841614, guid: ed96582ae15572440a2a8ba485ad69ed, type: 3}
       propertyPath: 'spawner.Array.data[0]'
@@ -2154,6 +2162,10 @@ PrefabInstance:
     - target: {fileID: 230055641510902891, guid: 4a98d54d060fbec4d9816d12332fbaec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 557313236709711744, guid: 4a98d54d060fbec4d9816d12332fbaec, type: 3}
+      propertyPath: enemySpawnTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 825075342590980328, guid: 4a98d54d060fbec4d9816d12332fbaec, type: 3}
       propertyPath: m_Name
