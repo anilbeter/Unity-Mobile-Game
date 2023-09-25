@@ -38,6 +38,11 @@ public class FadeCanvas : MonoBehaviour
         StartCoroutine(FadeOutString(levelName));
     }
 
+    public void FaderLoadInt(int levelIndex)
+    {
+        StartCoroutine(FadeOutInt(levelIndex));
+    }
+
     IEnumerator FadeIn()
     {
         fadeStarted = false;
@@ -60,6 +65,22 @@ public class FadeCanvas : MonoBehaviour
             yield return new WaitForSeconds(waitTime);
         }
         SceneManager.LoadScene(levelName);
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(FadeIn());
+    }
+
+    IEnumerator FadeOutInt(int levelIndex)
+    {
+        if (fadeStarted)
+            yield break;
+
+        fadeStarted = true;
+        while (canvasGroup.alpha < 1)
+        {
+            canvasGroup.alpha += changeValue;
+            yield return new WaitForSeconds(waitTime);
+        }
+        SceneManager.LoadScene(levelIndex);
         yield return new WaitForSeconds(0.1f);
         StartCoroutine(FadeIn());
     }
