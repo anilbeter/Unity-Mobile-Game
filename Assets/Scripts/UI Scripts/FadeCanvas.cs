@@ -49,6 +49,8 @@ public class FadeCanvas : MonoBehaviour
 
     IEnumerator FadeIn()
     {
+        if (fadeStarted)
+            yield break;
         loadingScreen.SetActive(false);
         fadeStarted = false;
         while (canvasGroup.alpha > 0)
