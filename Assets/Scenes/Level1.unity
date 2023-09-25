@@ -554,8 +554,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 949723985}
         m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: LoadLevelString
-        m_Mode: 5
+        m_MethodName: RestartLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba63372b7afe47f449c9dd47363c21d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 4
   healthFill: {fileID: 880356983}
   explosionPrefab: {fileID: 8505863203834674857, guid: 9c0ffb34a5059f0429a72faf21da9f41, type: 3}
   anim: {fileID: 809874317}
