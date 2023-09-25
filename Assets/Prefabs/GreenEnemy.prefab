@@ -105,6 +105,7 @@ MonoBehaviour:
   damage: 1
   explosionPrefab: {fileID: 8505863203834674857, guid: 9c0ffb34a5059f0429a72faf21da9f41, type: 3}
   anim: {fileID: 298806553750552886}
+  scoreValue: 10
   speed: 10
 --- !u!50 &5245900013348045402
 Rigidbody2D:
