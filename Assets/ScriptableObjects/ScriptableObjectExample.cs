@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[CreateAssetMenu(menuName = "ScriptableObject/PowerUpSpawner", fileName = "Spawner")]
 
-public class ScriptableObjectExample : MonoBehaviour
+public class ScriptableObjectExample : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] powerUp;
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnPowerUp(Vector3 spawnPos)
     {
-        
+        int randomPowerUp = Random.Range(0, powerUp.Length);
+        Instantiate(powerUp[randomPowerUp], spawnPos, Quaternion.identity);
     }
 }
