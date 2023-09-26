@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Image healthFill;
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private Animator anim;
+    [SerializeField] private Shield shield;
 
     private bool canPlayAnim = true;
 
@@ -23,6 +24,9 @@ public class PlayerStats : MonoBehaviour
 
     public void PlayerTakeDamage(float damage)
     {
+        if (shield.protection)
+            return;
+
         health -= damage;
         healthFill.fillAmount = health / maxHealth;
         if (canPlayAnim)
