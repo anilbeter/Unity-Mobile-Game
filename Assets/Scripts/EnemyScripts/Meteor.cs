@@ -8,6 +8,7 @@ public class Meteor : Enemy
     [SerializeField] private float maxSpeed;
     private float speed;
     [SerializeField] private float rotateSpeed;
+    [SerializeField] private ScriptableObjectExample powerUpSpawner;
 
     void Start()
     {
@@ -31,6 +32,11 @@ public class Meteor : Enemy
         base.DeathSequence();
         // IDEA -> spawn explosion prefab when meteor destroyed
         Instantiate(explosionPrefab, transform.position, transform.rotation);
+        if (powerUpSpawner != null)
+        {
+            powerUpSpawner.SpawnPowerUp(transform.position);
+            // IDEA -> spawn powerup when meteor destroyed
+        }
         Destroy(gameObject);
     }
 

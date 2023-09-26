@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62de3df71bae6ae4ead6040815b1ab6f, type: 3}
   m_Name: PowerUpSpawner_Basic
   m_EditorClassIdentifier: 
-  powerUp: []
+  spawnThreshold: 80
+  powerUp:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
