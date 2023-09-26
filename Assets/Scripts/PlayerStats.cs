@@ -45,4 +45,14 @@ public class PlayerStats : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         canPlayAnim = true;
     }
+
+    public void AddHealth(int healAmount)
+    {
+        health += healAmount;
+        if (health >= maxHealth)
+        {
+            health = maxHealth;
+        }
+        healthFill.fillAmount = health / maxHealth;
+    }
 }
