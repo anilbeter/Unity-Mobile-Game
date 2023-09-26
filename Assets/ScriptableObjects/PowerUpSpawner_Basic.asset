@@ -15,3 +15,4 @@ MonoBehaviour:
   spawnThreshold: 80
   powerUp:
   - {fileID: 2971275756194304539, guid: 8b79a740cd61f86488a1e4620f7b393d, type: 3}
+  - {fileID: 5762160026583055800, guid: e3afd14695bdcdc4ab736b5925fe4589, type: 3}
