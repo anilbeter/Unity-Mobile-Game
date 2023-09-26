@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class PlayerShieldActivator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Shield shield;
+
+    public void ActivateShield()
     {
-        
+        // is shield already active or not?
+        if (!shield.gameObject.activeSelf)
+        {
+            shield.gameObject.SetActive(true);
+        }
+        else
+        {
+            shield.RepairShield();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
