@@ -2016,10 +2016,6 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5300010460321814648, guid: 7fa9335c4e945e14eb453b0134db8602, type: 3}
-      propertyPath: shieldBase.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5300010460321814648, guid: 7fa9335c4e945e14eb453b0134db8602, type: 3}
       propertyPath: 'shieldBase.Array.data[0]'
       value: 
       objectReference: {fileID: 84915520}
