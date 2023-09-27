@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class BossBaseState : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    protected Camera mainCam;
+
+    protected float maxLeft;
+    protected float maxRight;
+    protected float maxDown;
+    protected float maxUp;
+
+    private void Awake()
     {
-        
+        mainCam = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void Start()
     {
-        
+        maxLeft = mainCam.ViewportToWorldPoint(new Vector2(0.3f, 0)).x;
+        maxRight = mainCam.ViewportToWorldPoint(new Vector2(0.7f, 0)).x;
+
+        maxDown = mainCam.ViewportToWorldPoint(new Vector2(0, 0.6f)).y;
+        maxUp = mainCam.ViewportToWorldPoint(new Vector2(0, 0.9f)).y;
+    }
+
+    public virtual void RunState()
+    {
+
+    }
+
+    public virtual void StopState()
+    {
+        StopAllCoroutines();
     }
 }
