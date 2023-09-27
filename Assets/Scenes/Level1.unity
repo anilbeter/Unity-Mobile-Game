@@ -425,6 +425,11 @@ Transform:
   - {fileID: 1831992231}
   m_Father: {fileID: 2094292064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &84915520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1373178272039419162, guid: f5884424774c92c4490ab0b688a28e78, type: 3}
+  m_PrefabInstance: {fileID: 3529060591940933895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &149401490
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +790,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &573559126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2359176504640413155, guid: f5884424774c92c4490ab0b688a28e78, type: 3}
+  m_PrefabInstance: {fileID: 3529060591940933895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &574485089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1047,11 @@ Transform:
   - {fileID: 1505843779}
   m_Father: {fileID: 2094292064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1383468807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2742537198845530860, guid: f5884424774c92c4490ab0b688a28e78, type: 3}
+  m_PrefabInstance: {fileID: 3529060591940933895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1505843778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,18 +1707,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 949723985}
-    - target: {fileID: 5949344728764625248, guid: f5884424774c92c4490ab0b688a28e78, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: LevelSelection
-      objectReference: {fileID: 0}
     - target: {fileID: 6336101030826833667, guid: f5884424774c92c4490ab0b688a28e78, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 949723985}
-    - target: {fileID: 6336101030826833667, guid: f5884424774c92c4490ab0b688a28e78, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: LevelSelection
-      objectReference: {fileID: 0}
     - target: {fileID: 6342600962987955436, guid: f5884424774c92c4490ab0b688a28e78, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1936,6 +1943,10 @@ PrefabInstance:
       value: WinCondition
       objectReference: {fileID: 0}
     - target: {fileID: 8081066963126841614, guid: ed96582ae15572440a2a8ba485ad69ed, type: 3}
+      propertyPath: possibleWinTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8081066963126841614, guid: ed96582ae15572440a2a8ba485ad69ed, type: 3}
       propertyPath: spawner.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2004,6 +2015,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5300010460321814648, guid: 7fa9335c4e945e14eb453b0134db8602, type: 3}
+      propertyPath: shieldBase.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300010460321814648, guid: 7fa9335c4e945e14eb453b0134db8602, type: 3}
+      propertyPath: 'shieldBase.Array.data[0]'
+      value: 
+      objectReference: {fileID: 84915520}
+    - target: {fileID: 5300010460321814648, guid: 7fa9335c4e945e14eb453b0134db8602, type: 3}
+      propertyPath: 'shieldBase.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1383468807}
+    - target: {fileID: 5300010460321814648, guid: 7fa9335c4e945e14eb453b0134db8602, type: 3}
+      propertyPath: 'shieldBase.Array.data[2]'
+      value: 
+      objectReference: {fileID: 573559126}
     - target: {fileID: 8585749683147666028, guid: 7fa9335c4e945e14eb453b0134db8602, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05
