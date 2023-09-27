@@ -50,6 +50,15 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
+    public void DecreaseUpgrade()
+    {
+        upgradeLevel -= 1;
+        if (upgradeLevel < 0)
+        {
+            upgradeLevel = 0;
+        }
+    }
+
     private void Shoot()
     {
 

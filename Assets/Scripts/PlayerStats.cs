@@ -15,11 +15,15 @@ public class PlayerStats : MonoBehaviour
 
     private bool canPlayAnim = true;
 
+    private PlayerShooting playerShooting;
+
     void Start()
     {
         health = maxHealth;
         healthFill.fillAmount = health / maxHealth;
         EndGameManager.endManager.gameOver = false;
+
+        playerShooting = GetComponent<PlayerShooting>();
     }
 
     public void PlayerTakeDamage(float damage)
@@ -34,6 +38,7 @@ public class PlayerStats : MonoBehaviour
             anim.SetTrigger("Damage");
             StartCoroutine(AntiSpamAnimation());
         }
+        playerShooting.DecreaseUpgrade();
         if (health <= 0)
         {
             EndGameManager.endManager.gameOver = true;
