@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class MiniBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private float speed;
+    [SerializeField] private float damage;
+    [SerializeField] private Rigidbody2D rb;
+
     void Start()
     {
-        
+        rb.velocity = transform.up * speed;
+        // transform up -> green axis
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerStats>().PlayerTakeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
