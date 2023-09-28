@@ -49,5 +49,18 @@ public class BossFire : BossBaseState
             yield return new WaitForEndOfFrame();
             fireStateTimer += Time.deltaTime;
         }
+        bossController.ChangeState(BossState.special);
+
+        // RANDOMNESS BEFORE SWITCH TO SPEACIAL ATTACK STATE
+        // ==================================================
+        // int randomPick = Random.Range(0, 2);
+        // if (randomPick == 0)
+        // {
+        //     bossController.ChangeState(BossState.fire);
+        // }
+        // else
+        // {
+        //     bossController.ChangeState(BossState.special);
+        // }
     }
 }
