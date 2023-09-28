@@ -1,18 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 
-public class BossSpecial : MonoBehaviour
+public class BossSpecial : BossBaseState
 {
+    [SerializeField] private float speed;
+    [SerializeField] private float waitTime;
+    [SerializeField] private GameObject specialBullet;
+    [SerializeField] private Transform shootingPoint;
+    private Vector2 targetPoint;
+
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        targetPoint = mainCam.ViewportToWorldPoint(new Vector3(0.5f, 0.9f));
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void RunState()
     {
-        
+        StartCoroutine(RunSpecialState());
+    }
+
+    public override void StopState()
+    {
+        base.StopState();
+    }
+
+    IEnumerator RunSpecialState()
+    {
+        while (Vector2.Distance(transform.position, targetPoint) > 0.01f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, targetPoint, speed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+        Instantiate(specialBullet, shootingPoint.position, Quaternion.identity);
+        yield return new WaitForSeconds(waitTime);
+        bossController.ChangeState(BossState.fire);
     }
 }

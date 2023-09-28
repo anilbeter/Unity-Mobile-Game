@@ -19,6 +19,7 @@ public class BossController : MonoBehaviour
 
     [SerializeField] private BossEnter bossEnter;
     [SerializeField] private BossFire bossFire;
+    [SerializeField] private BossSpecial bossSpecial;
 
     void Start()
     {
@@ -39,7 +40,7 @@ public class BossController : MonoBehaviour
                 bossFire.RunState();
                 break;
             case BossState.special:
-                Debug.Log("Do smth");
+                bossSpecial.RunState();
                 break;
             case BossState.death:
                 Debug.Log("Do smth");
