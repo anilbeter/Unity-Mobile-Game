@@ -15,6 +15,7 @@ public enum BossState
 public class BossController : MonoBehaviour
 {
     [SerializeField] private BossEnter bossEnter;
+    [SerializeField] private BossFire bossFire;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class BossController : MonoBehaviour
                 bossEnter.RunState();
                 break;
             case BossState.fire:
-                Debug.Log("Do smth");
+                bossFire.RunState();
                 break;
             case BossState.special:
                 Debug.Log("Do smth");
