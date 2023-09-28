@@ -14,12 +14,18 @@ public enum BossState
 
 public class BossController : MonoBehaviour
 {
+    [SerializeField] private bool test;
+    [SerializeField] private BossState testState;
+
     [SerializeField] private BossEnter bossEnter;
     [SerializeField] private BossFire bossFire;
 
     void Start()
     {
-
+        if (test)
+        {
+            ChangeState(testState);
+        }
     }
 
     public void ChangeState(BossState state)
