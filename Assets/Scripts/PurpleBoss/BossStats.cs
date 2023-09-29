@@ -21,7 +21,10 @@ public class BossStats : Enemy
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player"))
+        {
         PlayerStats stats = collision.GetComponent<PlayerStats>();
         stats.PlayerTakeDamage(damage);
+        }
     }
 }
