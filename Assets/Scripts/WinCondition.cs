@@ -7,6 +7,8 @@ public class WinCondition : MonoBehaviour
     private float timer;
     [SerializeField] private float possibleWinTime;
     [SerializeField] private GameObject[] spawner;
+    [SerializeField] private bool hasBoss;
+    public bool canSpawnBoss = false;
 
     void Start()
     {
@@ -21,11 +23,18 @@ public class WinCondition : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= possibleWinTime)
         {
+            if (!hasBoss)
+            {
+                EndGameManager.endManager.StartResolveSequence();
+            }
+            else
+            {
+                canSpawnBoss = true;
+            }
             for (int i = 0; i < spawner.Length; i++)
             {
                 spawner[i].SetActive(false);
             }
-            EndGameManager.endManager.StartResolveSequence();
             gameObject.SetActive(false);
             // create a function that will check if the player survived the last spawned enemy/meteor
             //   ---- win or lose screen

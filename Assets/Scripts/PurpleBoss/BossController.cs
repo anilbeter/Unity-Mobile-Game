@@ -24,6 +24,7 @@ public class BossController : MonoBehaviour
 
     void Start()
     {
+        ChangeState(BossState.enter);
         if (test)
         {
             ChangeState(testState);
