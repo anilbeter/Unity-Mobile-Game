@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossDeath : MonoBehaviour
+public class BossDeath : BossBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void RunState()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        EndGameManager.endManager.StartResolveSequence();
+        gameObject.SetActive(false);
     }
 }
