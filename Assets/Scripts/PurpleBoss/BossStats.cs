@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossStats : MonoBehaviour
+public class BossStats : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private BossController controller;
+
+    public override void HurtSequence()
     {
-        
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Dmg"))
+            return;
+        anim.SetTrigger("Damage");
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void DeathSequence()
     {
-        
+        base.DeathSequence();
+        controller.ChangeState(BossState.death);
+        Instantiate(explosionPrefab, transform.position, Quaternion.Euler(0,0, Random.Range(0, 360)));
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        PlayerStats stats = collision.GetComponent<PlayerStats>();
+        stats.PlayerTakeDamage(damage);
     }
 }
