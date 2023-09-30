@@ -21,6 +21,8 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Transform leftRotationCanon;
     [SerializeField] private Transform rightRotationCanon;
 
+    [SerializeField] private AudioSource shootingSound;
+
     private int upgradeLevel = 0;
 
     private float intervalReset;
@@ -61,7 +63,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Shoot()
     {
-
+        shootingSound.Play();
         switch (upgradeLevel)
         {
             case 0:
