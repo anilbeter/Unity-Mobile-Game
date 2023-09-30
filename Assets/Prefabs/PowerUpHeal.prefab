@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 2
+  soundPowerHeal: {fileID: 8300000, guid: 79468f4402ffed9498c3dda672711992, type: 3}
 --- !u!50 &1481311945733282955
 Rigidbody2D:
   serializedVersion: 4
